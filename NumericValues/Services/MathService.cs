@@ -39,6 +39,31 @@ public class MathService
         Console.WriteLine($"The sum of digits of {number} is: {sum}");
     }
 
+    public static void CalculatePower()
+    {
+        Console.WriteLine("\n==== Power Calculation ====");
+
+        double baseNumber = GetNumberInput("Enter the base number: ");
+        int exponent = GetIntegerInput("Enter the exponent: ");
+
+        double result = Math.Pow(baseNumber, exponent);
+        Console.WriteLine($"\n{baseNumber} ^ {exponent} = {result}");
+    }
+
+
+    public static void FindGreatestNumber()
+    {
+        Console.WriteLine("\n==== Find Greatest of Three Numbers ====");
+
+        double num1 = GetNumberInput("Enter the first number: ");
+        double num2 = GetNumberInput("Enter the second number ");
+        double num3 = GetNumberInput("Enter the third number");
+
+        double greatest = Math.Max(num1, Math.Max(num2, num3));
+
+        Console.WriteLine($"\nThe greatest number among {num1}, {num2}, and {num3} is: {greatest}");
+    }
+
     private static double GetNumberInput(string message)
     {
         double number;
@@ -57,6 +82,7 @@ public class MathService
             }
         }
     }
+    
 
     private static int GetIntegerInput(string message)
     {

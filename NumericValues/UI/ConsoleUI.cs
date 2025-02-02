@@ -52,12 +52,12 @@ Choose an option: ");
                 case "6":
                     MathService.CalculateSumOfDigits();
                     break;
-                //case "7":
-                //    MathService.CalculatePower();
-                //    break;
-                //case "8":
-                //    MathService.FindGreatestNumber();
-                //    break;
+                case "7":
+                    MathService.CalculatePower();
+                    break;
+                case "8":
+                    MathService.FindGreatestNumber();
+                    break;
                 //case "9":
                 //    MathService.CalculateFactorial();
                 //    break;
