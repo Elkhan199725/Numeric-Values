@@ -64,6 +64,59 @@ public class MathService
         Console.WriteLine($"\nThe greatest number among {num1}, {num2}, and {num3} is: {greatest}");
     }
 
+    public static void CalculateFactorial()
+    {
+        Console.WriteLine($"\n==== Factorial Calculation ====");
+
+        int number = GetIntegerInput("Enter a non-negative integer");
+
+        if ( number < 0 )
+        {
+            Console.WriteLine("Factorial is not defined for negative numbers.");
+        }
+
+        long factorial = 1;
+        for (int i = 1; i <= number; i++)
+        {
+            factorial *= i;
+        }
+
+        Console.WriteLine($"{number}! = {factorial}");
+    }
+
+    public static void IsPrime()
+    {
+        Console.WriteLine($"\n==== Prime Number Check ====");
+
+        int number = GetIntegerInput("Enter a number: ");
+
+        if ( number < 2)
+        {
+            Console.WriteLine($"{number} is NOT a prime number.");
+            return;
+        }
+
+        bool isPrime = true;
+
+        for (int i = 2; i <= Math.Sqrt(number); i++)
+        {
+            if (number % i == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if ( isPrime )
+        {
+            Console.WriteLine($"{number} is PRIME number.");
+        }
+        else
+        {
+            Console.WriteLine($"{number} is NOT a prime number.");
+        }
+    }
+
     private static double GetNumberInput(string message)
     {
         double number;

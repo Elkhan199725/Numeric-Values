@@ -58,12 +58,12 @@ Choose an option: ");
                 case "8":
                     MathService.FindGreatestNumber();
                     break;
-                //case "9":
-                //    MathService.CalculateFactorial();
-                //    break;
-                //case "10":
-                //    MathService.IsPrime();
-                //    break;
+                case "9":
+                    MathService.CalculateFactorial();
+                    break;
+                case "10":
+                    MathService.IsPrime();
+                    break;
                 default:
                     Console.WriteLine("Invalid choice! Please enter a number between 1-11.");
                     break;
