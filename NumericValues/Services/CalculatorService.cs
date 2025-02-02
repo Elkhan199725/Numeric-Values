@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace NumericValues.Services;
@@ -27,9 +28,23 @@ public class CalculatorService
         else
         {
             Console.WriteLine("Division: Cannot divide by zero");
-        }
+        }        
+    }
 
-        
+    public static void CheckEvenOdd()
+    {
+        Console.WriteLine("\n==== Even or Odd Check ====");
+
+        int number = GetIntegerInput("Enter a number: ");
+
+        if ( number % 2 == 0 )
+        {
+            Console.WriteLine($"{number} is Even.");
+        }
+        else
+        {
+            Console.WriteLine($"{number} is Odd");
+        }
     }
 
     private static double GetNumberInput(string message)
@@ -47,6 +62,25 @@ public class CalculatorService
             else
             {
                 Console.WriteLine("Invalid input! Please enter valid number.");
+            }
+        }
+    }
+
+    private static int GetIntegerInput(string message)
+    {
+        int number;
+        while (true)
+        {
+            Console.WriteLine(message);
+            string input = Console.ReadLine();
+
+            if (int.TryParse(input, out number))
+            {
+                return number;
+            }
+            else
+            {
+                Console.WriteLine("Invalid Input! Please enter a valid integer.");
             }
         }
     }

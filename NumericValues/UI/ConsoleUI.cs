@@ -14,22 +14,22 @@ public class ConsoleUI
         while (true)
         {
             Console.WriteLine
-                           (@"
-        ==== Numeric Practice ====
-         1. Arithmetic Operations
-         2. Even or Odd
-         3. Celsius to Fahrenheit
-         4. Circle Calculations
-         5. Multiplication Table
-         6. Sum of Digits
-         7. Power Calculation
-         8. Max of Three Numbers
-         9. Factorial
-        10. Prime Check
-        11. Exit
-        Choose an option: ");
+                (@" 
+==== Numeric Practice ====
+1. Arithmetic Operations
+2. Even or Odd
+3. Celsius to Fahrenheit
+4. Circle Calculations
+5. Multiplication Table
+6. Sum of Digits
+7. Power Calculation
+8. Max of Three Numbers
+9. Factorial
+10. Prime Check
+11. Exit
+Choose an option: ");
 
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
             if (input == "11") break;
 
             switch (input)
@@ -37,9 +37,9 @@ public class ConsoleUI
                 case "1":
                     CalculatorService.PerformBasicOperations();
                     break;
-                //case "2":
-                //    CalculatorService.CheckEvenOdd();
-                //    break;
+                case "2":
+                    CalculatorService.CheckEvenOdd();
+                    break;
                 //case "3":
                 //    ConversionService.ConvertCelsiusToFahrenheit();
                 //    break;
