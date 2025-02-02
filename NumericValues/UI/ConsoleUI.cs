@@ -40,18 +40,18 @@ Choose an option: ");
                 case "2":
                     CalculatorService.CheckEvenOdd();
                     break;
-                //case "3":
-                //    ConversionService.ConvertCelsiusToFahrenheit();
-                //    break;
-                //case "4":
-                //    MathService.CalculateCircleAreaCircumference();
-                //    break;
-                //case "5":
-                //    CalculatorService.PrintMultiplicationTable();
-                //    break;
-                //case "6":
-                //    MathService.CalculateSumOfDigits();
-                //    break;
+                case "3":
+                    ConversionService.ConvertCelsiusToFahrenheit();
+                    break;
+                case "4":
+                    MathService.CalculateCircleAreaCircumference();
+                    break;
+                case "5":
+                    CalculatorService.PrintMultiplicationTable();
+                    break;
+                case "6":
+                    MathService.CalculateSumOfDigits();
+                    break;
                 //case "7":
                 //    MathService.CalculatePower();
                 //    break;

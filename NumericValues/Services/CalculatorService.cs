@@ -30,7 +30,6 @@ public class CalculatorService
             Console.WriteLine("Division: Cannot divide by zero");
         }        
     }
-
     public static void CheckEvenOdd()
     {
         Console.WriteLine("\n==== Even or Odd Check ====");
@@ -46,14 +45,25 @@ public class CalculatorService
             Console.WriteLine($"{number} is Odd");
         }
     }
+    public static void PrintMultiplicationTable()
+    {
+        Console.WriteLine("\n==== Multiplication Table ====");
 
+        int number = GetIntegerInput("Enter a number: ");
+
+        Console.WriteLine($"\nMultiplication Table for {number}: ");
+        for ( int i = 1; i <= 10; i++)
+        {
+            Console.WriteLine($"{number} * {i} = {number * i}");
+        }
+    }
     private static double GetNumberInput(string message)
     {
         double number;
         while(true)
         {
             Console.WriteLine(message);
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
 
             if (double.TryParse(input, out number) )
             {
@@ -65,14 +75,13 @@ public class CalculatorService
             }
         }
     }
-
     private static int GetIntegerInput(string message)
     {
         int number;
         while (true)
         {
             Console.WriteLine(message);
-            string input = Console.ReadLine();
+            string? input = Console.ReadLine();
 
             if (int.TryParse(input, out number))
             {
