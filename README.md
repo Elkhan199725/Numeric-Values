@@ -1,9 +1,5 @@
 # Numeric-Values
-Here’s a well-structured README.md for your project:
 
-md
-Copy
-Edit
 # 📊 Numeric Practice Solution
 
 This is a C# console application designed to help you practice **numeric operations** in a structured and modular way.
