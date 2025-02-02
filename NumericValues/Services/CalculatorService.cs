@@ -1,0 +1,53 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace NumericValues.Services;
+
+public class CalculatorService
+{
+    public static void PerformBasicOperations()
+    {
+        Console.WriteLine("\n==== Basic Arithmetic Operations ====");
+
+        double num1 = GetNumberInput("Enter the first number: ");
+        double num2 = GetNumberInput("Enter the second number: ");
+
+        Console.WriteLine($"\nResults:");
+        Console.WriteLine($"Addition: {num1} + {num2} = {num1 + num2}");
+        Console.WriteLine($"Subtraction: {num1} - {num2} = {num1 - num2}");
+        Console.WriteLine($"Multiplication: {num1} * {num2} = {num1 * num2}");
+
+        if( num2 != 0)
+        {
+            Console.WriteLine($"Division: {num1} / {num2} = {num1 / num2}");
+        }
+        else
+        {
+            Console.WriteLine("Division: Cannot divide by zero");
+        }
+
+        
+    }
+
+    private static double GetNumberInput(string message)
+    {
+        double number;
+        while(true)
+        {
+            Console.WriteLine(message);
+            string input = Console.ReadLine();
+
+            if (double.TryParse(input, out number) )
+            {
+                return number;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input! Please enter valid number.");
+            }
+        }
+    }
+}

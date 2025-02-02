@@ -1,0 +1,14 @@
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\NumericValues\bin\Debug\net9.0\NumericValues.exe
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\NumericValues\bin\Debug\net9.0\NumericValues.deps.json
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\NumericValues\bin\Debug\net9.0\NumericValues.runtimeconfig.json
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\NumericValues\bin\Debug\net9.0\NumericValues.dll
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\NumericValues\bin\Debug\net9.0\NumericValues.pdb
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\NumericValues\obj\Debug\net9.0\NumericValues.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\NumericValues\obj\Debug\net9.0\NumericValues.AssemblyInfoInputs.cache
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\NumericValues\obj\Debug\net9.0\NumericValues.AssemblyInfo.cs
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\NumericValues\obj\Debug\net9.0\NumericValues.csproj.CoreCompileInputs.cache
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\NumericValues\obj\Debug\net9.0\NumericValues.dll
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\NumericValues\obj\Debug\net9.0\refint\NumericValues.dll
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\NumericValues\obj\Debug\net9.0\NumericValues.pdb
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\NumericValues\obj\Debug\net9.0\NumericValues.genruntimeconfig.cache
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\NumericValues\obj\Debug\net9.0\ref\NumericValues.dll
