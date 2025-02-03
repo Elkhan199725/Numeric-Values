@@ -1,8 +1,10 @@
-﻿using System;
+﻿using NumericValues.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static NumericValues.Helpers.InputValidator;
 
 namespace NumericValues.Services;
 
@@ -12,29 +14,27 @@ public class MathService
     {
         Console.WriteLine("\n==== Circle Calculations ====");
 
-        double radius = GetNumberInput("Enter the radius of the circle: ");
-        
-        double area = Math.PI * Math.Pow(radius,2);
-        double circumference = 2 * Math.PI * radius;
+        double radius = GetValidDouble("Enter the radius of the circle: ");
 
-        Console.WriteLine($"\nFor a circle with radius {radius}");
+        const double PI = Math.PI;
+        double radiusSquared = radius * radius; // Avoid redundant `Math.Pow()`
+
+        double area = PI * radiusSquared;
+        double circumference = 2 * PI * radius;
+
+        Console.WriteLine($"\nFor a circle with radius {radius}:");
         Console.WriteLine($"Area: {area}");
         Console.WriteLine($"Circumference: {circumference}");
     }
+
 
     public static void CalculateSumOfDigits()
     {
         Console.WriteLine("\n==== Sum of Digits Calculation ====");
 
-        int number = GetIntegerInput("Enter a number: ");
-        int sum = 0; 
-        int temp = Math.Abs(number);
+        int number = GetValidInt("Enter a number: ");
 
-        while( temp > 0 )
-        {
-            sum += temp % 10;
-            temp /= 10;
-        }
+        int sum = number.ToString().Where(char.IsDigit).Sum(c => c - '0');
 
         Console.WriteLine($"The sum of digits of {number} is: {sum}");
     }
@@ -43,115 +43,90 @@ public class MathService
     {
         Console.WriteLine("\n==== Power Calculation ====");
 
-        double baseNumber = GetNumberInput("Enter the base number: ");
-        int exponent = GetIntegerInput("Enter the exponent: ");
+        double baseNumber = InputValidator.GetValidDouble("Enter the base number: ");
+        int exponent = InputValidator.GetValidInt("Enter the exponent: ");
+
+        if (exponent == 0)
+        {
+            Console.WriteLine($"Any number raised to 0 is 1.");
+            return;
+        }
+        if (baseNumber == 1)
+        {
+            Console.WriteLine($"1 raised to any power is always 1.");
+            return;
+        }
 
         double result = Math.Pow(baseNumber, exponent);
-        Console.WriteLine($"\n{baseNumber} ^ {exponent} = {result}");
+        Console.WriteLine($"{baseNumber} ^ {exponent} = {result}");
     }
-
 
     public static void FindGreatestNumber()
     {
-        Console.WriteLine("\n==== Find Greatest of Three Numbers ====");
+        Console.WriteLine("\n==== Find the Greatest of Three Numbers ====");
 
-        double num1 = GetNumberInput("Enter the first number: ");
-        double num2 = GetNumberInput("Enter the second number ");
-        double num3 = GetNumberInput("Enter the third number");
+        double num1 = GetValidDouble("Enter the first number: ");
+        double num2 = GetValidDouble("Enter the second number: ");
+        double num3 = GetValidDouble("Enter the third number: ");
 
-        double greatest = Math.Max(num1, Math.Max(num2, num3));
+        double greatest = num1;
+
+        if (num2 > greatest) greatest = num2;
+        if (num3 > greatest) greatest = num3;
 
         Console.WriteLine($"\nThe greatest number among {num1}, {num2}, and {num3} is: {greatest}");
     }
 
+
+    public static long FactorialRecursive(int n)
+    {
+        if (n == 0 || n == 1)
+            return 1;
+        return n * FactorialRecursive(n - 1);
+    }
+
     public static void CalculateFactorial()
     {
-        Console.WriteLine($"\n==== Factorial Calculation ====");
+        Console.WriteLine("\n==== Factorial Calculation ====");
 
-        int number = GetIntegerInput("Enter a non-negative integer");
+        int number = GetPositiveInteger("Enter a non-negative integer: ");
+        long result = FactorialRecursive(number);
 
-        if ( number < 0 )
-        {
-            Console.WriteLine("Factorial is not defined for negative numbers.");
-        }
-
-        long factorial = 1;
-        for (int i = 1; i <= number; i++)
-        {
-            factorial *= i;
-        }
-
-        Console.WriteLine($"{number}! = {factorial}");
+        Console.WriteLine($"{number}! = {result}");
     }
 
     public static void IsPrime()
     {
-        Console.WriteLine($"\n==== Prime Number Check ====");
+        Console.WriteLine("\n==== Prime Number Check ====");
 
-        int number = GetIntegerInput("Enter a number: ");
+        int number = GetValidInt("Enter a number: ");
 
-        if ( number < 2)
+        if (number < 2)
+        {
+            Console.WriteLine($"{number} is NOT a prime number.");
+            return;
+        }
+        if (number == 2)
+        {
+            Console.WriteLine("2 is a PRIME number.");
+            return;
+        }
+        if (number % 2 == 0)
         {
             Console.WriteLine($"{number} is NOT a prime number.");
             return;
         }
 
-        bool isPrime = true;
-
-        for (int i = 2; i <= Math.Sqrt(number); i++)
+        for (int i = 3; i <= Math.Sqrt(number); i += 2) // Skip even numbers
         {
             if (number % i == 0)
             {
-                isPrime = false;
-                break;
+                Console.WriteLine($"{number} is NOT a prime number.");
+                return;
             }
         }
 
-        if ( isPrime )
-        {
-            Console.WriteLine($"{number} is PRIME number.");
-        }
-        else
-        {
-            Console.WriteLine($"{number} is NOT a prime number.");
-        }
+        Console.WriteLine($"{number} is a PRIME number.");
     }
 
-    private static double GetNumberInput(string message)
-    {
-        double number;
-        while (true)
-        {
-            Console.WriteLine(message);
-            string? input = Console.ReadLine();
-
-            if (double.TryParse(input, out number) &&  number > 0)
-            {
-                return number;
-            }
-            else
-            {
-                Console.WriteLine("Invalid input! Please enter valid number.");
-            }
-        }
-    }
-    
-
-    private static int GetIntegerInput(string message)
-    {
-        int number;
-        while (true)
-        {
-            Console.WriteLine(message);
-            string? input = Console.ReadLine();
-            if(int.TryParse(input, out number))
-            {
-                return number;
-            }
-            else
-            {
-                Console.WriteLine("Invalid input! Please enter valid number.");
-            }
-        }
-    }
 }

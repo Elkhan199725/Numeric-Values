@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
+using static NumericValues.Helpers.InputValidator;
 
 namespace NumericValues.Services;
 
@@ -13,8 +14,8 @@ public class CalculatorService
     {
         Console.WriteLine("\n==== Basic Arithmetic Operations ====");
 
-        double num1 = GetNumberInput("Enter the first number: ");
-        double num2 = GetNumberInput("Enter the second number: ");
+        double num1 = GetValidDouble("Enter the first number: ");
+        double num2 = GetValidDouble("Enter the second number: ");
 
         Console.WriteLine($"\nResults:");
         Console.WriteLine($"Addition: {num1} + {num2} = {num1 + num2}");
@@ -34,7 +35,7 @@ public class CalculatorService
     {
         Console.WriteLine("\n==== Even or Odd Check ====");
 
-        int number = GetIntegerInput("Enter a number: ");
+        int number = GetValidInt("Enter a number: ");
 
         if ( number % 2 == 0 )
         {
@@ -49,48 +50,16 @@ public class CalculatorService
     {
         Console.WriteLine("\n==== Multiplication Table ====");
 
-        int number = GetIntegerInput("Enter a number: ");
+        int number = GetValidInt("Enter a number: ");
 
-        Console.WriteLine($"\nMultiplication Table for {number}: ");
+        StringBuilder table = new StringBuilder();
+        table.AppendLine($"\nMultiplication Table for {number}: ");
+
         for ( int i = 1; i <= 10; i++)
         {
-            Console.WriteLine($"{number} * {i} = {number * i}");
+            table.AppendLine($"{number} * {i} = {number * i}");
         }
-    }
-    private static double GetNumberInput(string message)
-    {
-        double number;
-        while(true)
-        {
-            Console.WriteLine(message);
-            string? input = Console.ReadLine();
 
-            if (double.TryParse(input, out number) )
-            {
-                return number;
-            }
-            else
-            {
-                Console.WriteLine("Invalid input! Please enter valid number.");
-            }
-        }
-    }
-    private static int GetIntegerInput(string message)
-    {
-        int number;
-        while (true)
-        {
-            Console.WriteLine(message);
-            string? input = Console.ReadLine();
-
-            if (int.TryParse(input, out number))
-            {
-                return number;
-            }
-            else
-            {
-                Console.WriteLine("Invalid Input! Please enter a valid integer.");
-            }
-        }
+        Console.WriteLine(table.ToString());
     }
 }
