@@ -15,21 +15,7 @@ public class ConsoleUI
         {
             Console.Clear();
             PrintHeader();
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("[1]  Arithmetic Operations");
-            Console.WriteLine("[2]  Even or Odd Check");
-            Console.WriteLine("[3]  Celsius to Fahrenheit");
-            Console.WriteLine("[4]  Circle Calculations");
-            Console.WriteLine("[5]  Multiplication Table");
-            Console.WriteLine("[6]  Sum of Digits");
-            Console.WriteLine("[7]  Power Calculation");
-            Console.WriteLine("[8]  Greatest of Three Numbers");
-            Console.WriteLine("[9]  Factorial Calculation");
-            Console.WriteLine("[10] Prime Number Check");
-            Console.WriteLine("[0]  Exit");
-            Console.ResetColor();
-            PrintFooter();
+            ShowMenu();
 
             Console.Write("👉 Enter your choice: ");
             string? input = Console.ReadLine();
@@ -97,39 +83,67 @@ public class ConsoleUI
         }
     }
 
+    // 📌 Prints the Main Header
     private static void PrintHeader()
     {
         Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine("╔═══════════════════════════════╗");
-        Console.WriteLine("║       NUMERIC PRACTICE APP    ║");
-        Console.WriteLine("╚═══════════════════════════════╝");
+        Console.WriteLine("╔════════════════════════════════════════╗");
+        Console.WriteLine("║      🌟 NUMERIC PRACTICE APP 🌟       ║");
+        Console.WriteLine("╚════════════════════════════════════════╝");
         Console.ResetColor();
     }
 
-    private static void PrintFooter()
+    // 📌 Prints the Menu with Animations
+    private static void ShowMenu()
     {
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine("╔═══════════════════════════════╗");
-        Console.WriteLine("║       Select an Option        ║");
-        Console.WriteLine("╚═══════════════════════════════╝");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("╔═══════════════════════════════════╗");
+        Console.WriteLine("║          📜 MAIN MENU            ║");
+        Console.WriteLine("╠═══════════════════════════════════╣");
+
+        DisplayMenu(); // Calls the typing effect menu
+
+        Console.WriteLine("╚═══════════════════════════════════╝");
         Console.ResetColor();
     }
 
-    private static void ShowExitAnimation()
+    // 📌 Displays Menu with a Smooth Typing Effect
+    private static void DisplayMenu()
     {
-        Console.Clear();
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.Write("\nExiting");
-        for (int i = 0; i < 3; i++)
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        string[] menuItems = {
+            "[1]  Arithmetic Operations",
+            "[2]  Even or Odd Check",
+            "[3]  Celsius to Fahrenheit",
+            "[4]  Circle Calculations",
+            "[5]  Multiplication Table",
+            "[6]  Sum of Digits",
+            "[7]  Power Calculation",
+            "[8]  Greatest of Three Numbers",
+            "[9]  Factorial Calculation",
+            "[10] Prime Number Check",
+            "[0]  Exit"
+        };
+
+        foreach (string item in menuItems)
         {
-            Thread.Sleep(500);
-            Console.Write(".");
+            TypeEffect(item);
         }
-        Console.WriteLine("\nGoodbye!");
         Console.ResetColor();
-        Thread.Sleep(1000);
     }
 
+    // 📌 Simulates Typing Animation
+    private static void TypeEffect(string message)
+    {
+        foreach (char c in message)
+        {
+            Console.Write(c);
+            Thread.Sleep(30); // Adjust speed if needed
+        }
+        Console.WriteLine();
+    }
+
+    // 📌 Animated Loading Bar with Spinner
     private static void ShowLoadingBar(string message)
     {
         Console.ForegroundColor = ConsoleColor.Yellow;
@@ -153,7 +167,32 @@ public class ConsoleUI
         Console.WriteLine("\n");
     }
 
+    // 📌 Smooth Animated Exit Effect
+    private static void ShowExitAnimation()
+    {
+        Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Red;
 
+        string[] goodbyeArt = {
+            "╔═══════════════════════════╗",
+            "║      👋 Goodbye!          ║",
+            "║  Thanks for Using Our App ║",
+            "║      See You Again!       ║",
+            "╚═══════════════════════════╝"
+        };
+
+        foreach (string line in goodbyeArt)
+        {
+            Console.WriteLine(line);
+            Thread.Sleep(300);
+        }
+
+        Console.ResetColor();
+        Thread.Sleep(1500);
+        Console.Clear();
+    }
+
+    // 📌 Fancy Intro Animation
     private static void ShowIntroAnimation()
     {
         Console.Clear();
@@ -162,8 +201,8 @@ public class ConsoleUI
         string[] animation = {
             "╔════════════════════════╗",
             "║                        ║",
-            "║   NUMERIC PRACTICE     ║",
-            "║        APP            ║",
+            "║   🌟 NUMERIC PRACTICE  ║",
+            "║       APP 📊          ║",
             "║                        ║",
             "╚════════════════════════╝"
         };
@@ -171,10 +210,10 @@ public class ConsoleUI
         foreach (string line in animation)
         {
             Console.WriteLine(line);
-            Thread.Sleep(200); // Creates a smooth loading effect
+            Thread.Sleep(200);
         }
-        Console.ResetColor();
 
+        Console.ResetColor();
         Thread.Sleep(500);
         Console.Clear();
     }

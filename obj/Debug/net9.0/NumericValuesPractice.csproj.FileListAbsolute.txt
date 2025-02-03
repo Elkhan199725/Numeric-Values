@@ -1,0 +1,5 @@
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\obj\Debug\net9.0\NumericValuesPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\obj\Debug\net9.0\NumericValuesPractice.AssemblyInfoInputs.cache
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\obj\Debug\net9.0\NumericValuesPractice.AssemblyInfo.cs
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\obj\Debug\net9.0\NumericValuesPractice.csproj.CoreCompileInputs.cache
+C:\Users\Elkhan Mammadli\source\repos\NumericValuesPractice\obj\Debug\net9.0\NumericValuesPractice.sourcelink.json
