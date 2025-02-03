@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using NumericValues.Helpers;
+using System;
 using System.Text;
-using System.Threading.Channels;
-using System.Threading.Tasks;
-using static NumericValues.Helpers.InputValidator;
 
 namespace NumericValues.Services;
 
@@ -14,52 +10,80 @@ public class CalculatorService
     {
         Console.WriteLine("\n==== Basic Arithmetic Operations ====");
 
-        double num1 = GetValidDouble("Enter the first number: ");
-        double num2 = GetValidDouble("Enter the second number: ");
+        double num1 = InputValidator.GetValidDouble("Enter the first number: ");
+        double num2 = InputValidator.GetValidDouble("Enter the second number: ");
 
-        Console.WriteLine($"\nResults:");
-        Console.WriteLine($"Addition: {num1} + {num2} = {num1 + num2}");
-        Console.WriteLine($"Subtraction: {num1} - {num2} = {num1 - num2}");
-        Console.WriteLine($"Multiplication: {num1} * {num2} = {num1 * num2}");
-
-        if( num2 != 0)
+        Console.Write("\nProcessing ");
+        using (var spinner = new Spinner(Console.CursorLeft, Console.CursorTop))
         {
-            Console.WriteLine($"Division: {num1} / {num2} = {num1 / num2}");
+            spinner.Start();
+            Thread.Sleep(1500);
+            spinner.Stop();
+        }
+
+        StringBuilder results = new StringBuilder();
+        results.AppendLine($"\nResults:");
+        results.AppendLine($"➕ Addition: {num1} + {num2} = {num1 + num2:F2}");
+        results.AppendLine($"➖ Subtraction: {num1} - {num2} = {num1 - num2:F2}");
+        results.AppendLine($"✖ Multiplication: {num1} * {num2} = {num1 * num2:F2}");
+
+        if (num2 != 0)
+        {
+            results.AppendLine($"➗ Division: {num1} / {num2} = {num1 / num2:F2}");
         }
         else
         {
-            Console.WriteLine("Division: Cannot divide by zero");
-        }        
+            results.AppendLine("❌ Division: Cannot divide by zero.");
+        }
+
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine(results.ToString());
+        Console.ResetColor();
     }
+
     public static void CheckEvenOdd()
     {
         Console.WriteLine("\n==== Even or Odd Check ====");
 
-        int number = GetValidInt("Enter a number: ");
+        int number = InputValidator.GetValidInt("Enter a number: ");
 
-        if ( number % 2 == 0 )
+        Console.Write("\nChecking ");
+        using (var spinner = new Spinner(Console.CursorLeft, Console.CursorTop))
         {
-            Console.WriteLine($"{number} is Even.");
+            spinner.Start();
+            Thread.Sleep(1000);
+            spinner.Stop();
         }
-        else
-        {
-            Console.WriteLine($"{number} is Odd");
-        }
+
+        Console.ForegroundColor = (number % 2 == 0) ? ConsoleColor.Green : ConsoleColor.Yellow;
+        Console.WriteLine($"\n{number} is {(number % 2 == 0 ? "Even" : "Odd")}.");
+        Console.ResetColor();
     }
+
     public static void PrintMultiplicationTable()
     {
         Console.WriteLine("\n==== Multiplication Table ====");
 
-        int number = GetValidInt("Enter a number: ");
+        int number = InputValidator.GetValidInt("Enter a number: ");
 
-        StringBuilder table = new StringBuilder();
-        table.AppendLine($"\nMultiplication Table for {number}: ");
-
-        for ( int i = 1; i <= 10; i++)
+        Console.Write("\nGenerating Table ");
+        using (var spinner = new Spinner(Console.CursorLeft, Console.CursorTop))
         {
-            table.AppendLine($"{number} * {i} = {number * i}");
+            spinner.Start();
+            Thread.Sleep(1500);
+            spinner.Stop();
         }
 
+        StringBuilder table = new StringBuilder();
+        table.AppendLine($"\nMultiplication Table for {number}:");
+
+        for (int i = 1; i <= 10; i++)
+        {
+            table.AppendLine($"   {number} × {i} = {number * i}");
+        }
+
+        Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine(table.ToString());
+        Console.ResetColor();
     }
 }

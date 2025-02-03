@@ -1,11 +1,5 @@
 ﻿using NumericValues.Helpers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Channels;
-using System.Threading.Tasks;
-using static NumericValues.Helpers.InputValidator;
 
 namespace NumericValues.Services;
 
@@ -15,14 +9,22 @@ public class ConversionService
     {
         Console.WriteLine("\n==== Celsius to Fahrenheit Conversion ====");
 
-        double celsius = GetValidDouble("Enter temperature in Celsius: ");
+        double celsius = InputValidator.GetValidDouble("Enter temperature in Celsius: ");
+
+        Console.Write("\nConverting ");
+        using (var spinner = new Spinner(Console.CursorLeft, Console.CursorTop))
+        {
+            spinner.Start();
+            Thread.Sleep(1500); // Simulate conversion time
+            spinner.Stop();
+        }
 
         const double factor = 9.0 / 5.0;
         const double offset = 32.0;
-
         double fahrenheit = (celsius * factor) + offset;
 
-        Console.WriteLine($"{celsius}°C is equal to {fahrenheit}°F.");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine($"\n🌡️ {celsius:F2}°C is equal to {fahrenheit:F2}°F.");
+        Console.ResetColor();
     }
-
 }

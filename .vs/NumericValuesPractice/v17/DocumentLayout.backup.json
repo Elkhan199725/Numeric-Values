@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Elkhan Mammadli\\source\\repos\\NumericValuesPractice\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|c:\\users\\elkhan mammadli\\source\\repos\\numericvaluespractice\\numericvalues\\ui\\consoleui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|solutionrelative:numericvalues\\ui\\consoleui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|c:\\users\\elkhan mammadli\\source\\repos\\numericvaluespractice\\numericvalues\\services\\calculatorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|solutionrelative:numericvalues\\services\\calculatorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|c:\\users\\elkhan mammadli\\source\\repos\\numericvaluespractice\\numericvalues\\services\\conversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|solutionrelative:numericvalues\\services\\conversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|c:\\users\\elkhan mammadli\\source\\repos\\numericvaluespractice\\numericvalues\\services\\calculatorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|solutionrelative:numericvalues\\services\\calculatorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|c:\\users\\elkhan mammadli\\source\\repos\\numericvaluespractice\\numericvalues\\services\\mathservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|solutionrelative:numericvalues\\services\\mathservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|c:\\users\\elkhan mammadli\\source\\repos\\numericvaluespractice\\numericvalues\\helpers\\inputvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|solutionrelative:numericvalues\\helpers\\inputvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|c:\\users\\elkhan mammadli\\source\\repos\\numericvaluespractice\\numericvalues\\ui\\consoleui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|solutionrelative:numericvalues\\ui\\consoleui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|c:\\users\\elkhan mammadli\\source\\repos\\numericvaluespractice\\numericvalues\\helpers\\spinner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|solutionrelative:numericvalues\\helpers\\spinner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|c:\\users\\elkhan mammadli\\source\\repos\\numericvaluespractice\\numericvalues\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|solutionrelative:numericvalues\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|c:\\users\\elkhan mammadli\\source\\repos\\numericvaluespractice\\numericvalues\\helpers\\inputvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA394C0C-688F-4523-91F7-DE1CFDD1813A}|NumericValues\\NumericValues.csproj|solutionrelative:numericvalues\\helpers\\inputvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,6 +51,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Spinner.cs",
+              "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\source\\repos\\NumericValuesPractice\\NumericValues\\Helpers\\Spinner.cs",
+              "RelativeDocumentMoniker": "NumericValues\\Helpers\\Spinner.cs",
+              "ToolTip": "C:\\Users\\Elkhan Mammadli\\source\\repos\\NumericValuesPractice\\NumericValues\\Helpers\\Spinner.cs",
+              "RelativeToolTip": "NumericValues\\Helpers\\Spinner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T20:10:47.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "InputValidator.cs",
               "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\source\\repos\\NumericValuesPractice\\NumericValues\\Helpers\\InputValidator.cs",
               "RelativeDocumentMoniker": "NumericValues\\Helpers\\InputValidator.cs",
@@ -58,13 +75,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MathService.cs",
               "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\source\\repos\\NumericValuesPractice\\NumericValues\\Services\\MathService.cs",
               "RelativeDocumentMoniker": "NumericValues\\Services\\MathService.cs",
               "ToolTip": "C:\\Users\\Elkhan Mammadli\\source\\repos\\NumericValuesPractice\\NumericValues\\Services\\MathService.cs",
               "RelativeToolTip": "NumericValues\\Services\\MathService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-02T11:51:43.029Z",
               "EditorCaption": ""
@@ -77,33 +94,33 @@
               "RelativeDocumentMoniker": "NumericValues\\Services\\ConversionService.cs",
               "ToolTip": "C:\\Users\\Elkhan Mammadli\\source\\repos\\NumericValuesPractice\\NumericValues\\Services\\ConversionService.cs",
               "RelativeToolTip": "NumericValues\\Services\\ConversionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-02T10:39:25.28Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "CalculatorService.cs",
               "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\source\\repos\\NumericValuesPractice\\NumericValues\\Services\\CalculatorService.cs",
               "RelativeDocumentMoniker": "NumericValues\\Services\\CalculatorService.cs",
               "ToolTip": "C:\\Users\\Elkhan Mammadli\\source\\repos\\NumericValuesPractice\\NumericValues\\Services\\CalculatorService.cs",
               "RelativeToolTip": "NumericValues\\Services\\CalculatorService.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowEAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAwwFcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-02T01:38:46.283Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ConsoleUI.cs",
               "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\source\\repos\\NumericValuesPractice\\NumericValues\\UI\\ConsoleUI.cs",
               "RelativeDocumentMoniker": "NumericValues\\UI\\ConsoleUI.cs",
               "ToolTip": "C:\\Users\\Elkhan Mammadli\\source\\repos\\NumericValuesPractice\\NumericValues\\UI\\ConsoleUI.cs",
               "RelativeToolTip": "NumericValues\\UI\\ConsoleUI.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAgwEUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAgwJUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-02T00:52:30.78Z",
               "EditorCaption": ""
@@ -116,9 +133,10 @@
               "RelativeDocumentMoniker": "NumericValues\\Program.cs",
               "ToolTip": "C:\\Users\\Elkhan Mammadli\\source\\repos\\NumericValuesPractice\\NumericValues\\Program.cs",
               "RelativeToolTip": "NumericValues\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T00:35:40.586Z"
+              "WhenOpened": "2025-02-02T00:35:40.586Z",
+              "EditorCaption": ""
             }
           ]
         }
