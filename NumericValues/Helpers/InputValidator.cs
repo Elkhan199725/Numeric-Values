@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NumericValues.Helpers;
 
@@ -14,33 +9,41 @@ public class InputValidator
         double number;
         while (true)
         {
-            Console.WriteLine(message);
-            string? input = Console.ReadLine();
+            Console.Write($"{message} ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            string? input = Console.ReadLine()?.Trim(); // Remove extra spaces
+            Console.ResetColor();
 
             if (double.TryParse(input, out number))
             {
                 return number;
             }
-            else
-            {
-                Console.WriteLine("❌ Invalid input! Please enter a valid number.");
-            }
+
+            ShowError("Invalid input! Please enter a valid number.");
         }
-    }    public static double GetPositiveDouble(string message)
+    }
+
+    public static double GetPositiveDouble(string message)
     {
         double number;
         while (true)
         {
-            Console.WriteLine(message);
-            string? input = Console.ReadLine();
+            Console.Write($"{message} ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            string? input = Console.ReadLine()?.Trim();
+            Console.ResetColor();
 
-            if (double.TryParse(input, out number) && number > 0)
+            if (double.TryParse(input, out number))
             {
-                return number;
+                if (number > 0)
+                {
+                    return number;
+                }
+                ShowError("Number must be greater than 0.");
             }
             else
             {
-                Console.WriteLine("❌ Invalid input! Please enter a valid number.");
+                ShowError("Invalid input! Please enter a valid positive number.");
             }
         }
     }
@@ -50,17 +53,17 @@ public class InputValidator
         int number;
         while (true)
         {
-            Console.WriteLine(message);
-            string? input = Console.ReadLine();
+            Console.Write($"{message} ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            string? input = Console.ReadLine()?.Trim();
+            Console.ResetColor();
 
             if (int.TryParse(input, out number))
             {
                 return number;
             }
-            else
-            {
-                Console.WriteLine("❌ Invalid input! Please enter a valid integer.");
-            }
+
+            ShowError("Invalid input! Please enter a valid integer.");
         }
     }
 
@@ -69,17 +72,31 @@ public class InputValidator
         int number;
         while (true)
         {
-            Console.WriteLine(message);
-            string? input = Console.ReadLine();
-            
-            if(int.TryParse(input, out number) && number > 0)
+            Console.Write($"{message} ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            string? input = Console.ReadLine()?.Trim();
+            Console.ResetColor();
+
+            if (int.TryParse(input, out number))
             {
-                return number;
+                if (number > 0)
+                {
+                    return number;
+                }
+                ShowError("Number must be greater than 0.");
             }
             else
             {
-                Console.WriteLine("❌ Invalid input! Please enter a valid integer.");
+                ShowError("Invalid input! Please enter a valid positive integer.");
             }
         }
+    }
+
+    // 📌 Centralized Error Display with Red Color
+    private static void ShowError(string errorMessage)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"❌ {errorMessage}");
+        Console.ResetColor();
     }
 }

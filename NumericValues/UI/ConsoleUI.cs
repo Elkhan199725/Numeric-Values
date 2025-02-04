@@ -138,7 +138,7 @@ public class ConsoleUI
         foreach (char c in message)
         {
             Console.Write(c);
-            Thread.Sleep(30); // Adjust speed if needed
+            Thread.Sleep(20); // Adjusted speed for a smoother effect
         }
         Console.WriteLine();
     }
@@ -157,7 +157,7 @@ public class ConsoleUI
 
             for (int i = 0; i < 10; i++)
             {
-                Thread.Sleep(200);
+                Thread.Sleep(150);
                 Console.Write("█"); // Prints loading blocks
             }
 
@@ -184,11 +184,11 @@ public class ConsoleUI
         foreach (string line in goodbyeArt)
         {
             Console.WriteLine(line);
-            Thread.Sleep(300);
+            Thread.Sleep(250);
         }
 
         Console.ResetColor();
-        Thread.Sleep(1500);
+        Thread.Sleep(1200);
         Console.Clear();
     }
 
@@ -210,11 +210,11 @@ public class ConsoleUI
         foreach (string line in animation)
         {
             Console.WriteLine(line);
-            Thread.Sleep(200);
+            Thread.Sleep(150);
         }
 
         Console.ResetColor();
-        Thread.Sleep(500);
+        Thread.Sleep(400);
         Console.Clear();
     }
 }

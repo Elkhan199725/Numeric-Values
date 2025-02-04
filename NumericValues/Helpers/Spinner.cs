@@ -1,30 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace NumericValues.Helpers;
 
-using System;
-using System.Threading;
-
 public class Spinner : IDisposable
 {
-    private const string Sequence = @"/-\|";
+    private const string Sequence = @"/-\|";  // Rotating spinner symbols
     private int counter = 0;
     private readonly int left;
     private readonly int top;
     private readonly int delay;
     private bool active;
     private readonly Thread thread;
+    private readonly ConsoleColor spinnerColor;
 
-    public Spinner(int left, int top, int delay = 100)
+    public Spinner(int left, int top, int delay = 100, ConsoleColor color = ConsoleColor.Green)
     {
         this.left = left;
         this.top = top;
         this.delay = delay;
-        thread = new Thread(Spin);
+        this.spinnerColor = color;
+        thread = new Thread(Spin) { IsBackground = true };  // Ensures thread doesn't prevent app from closing
     }
 
     public void Start()
@@ -37,7 +33,8 @@ public class Spinner : IDisposable
     public void Stop()
     {
         active = false;
-        Draw(' '); // Clears the spinner
+        thread.Join(); // Ensures the thread properly stops
+        ClearSpinner();
     }
 
     private void Spin()
@@ -52,7 +49,7 @@ public class Spinner : IDisposable
     private void Draw(char c)
     {
         Console.SetCursorPosition(left, top);
-        Console.ForegroundColor = ConsoleColor.Green;
+        Console.ForegroundColor = spinnerColor;
         Console.Write(c);
         Console.ResetColor();
     }
@@ -60,6 +57,12 @@ public class Spinner : IDisposable
     private void Turn()
     {
         Draw(Sequence[++counter % Sequence.Length]);
+    }
+
+    private void ClearSpinner()
+    {
+        Console.SetCursorPosition(left, top);
+        Console.Write(' '); // Clears the spinner
     }
 
     public void Dispose()

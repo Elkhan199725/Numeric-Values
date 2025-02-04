@@ -22,18 +22,20 @@ public class CalculatorService
         }
 
         StringBuilder results = new StringBuilder();
-        results.AppendLine($"\nResults:");
+        results.AppendLine("\n📌 Results:");
         results.AppendLine($"➕ Addition: {num1} + {num2} = {num1 + num2:F2}");
         results.AppendLine($"➖ Subtraction: {num1} - {num2} = {num1 - num2:F2}");
-        results.AppendLine($"✖ Multiplication: {num1} * {num2} = {num1 * num2:F2}");
+        results.AppendLine($"✖ Multiplication: {num1} × {num2} = {num1 * num2:F2}");
 
         if (num2 != 0)
         {
-            results.AppendLine($"➗ Division: {num1} / {num2} = {num1 / num2:F2}");
+            results.AppendLine($"➗ Division: {num1} ÷ {num2} = {num1 / num2:F2}");
         }
         else
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             results.AppendLine("❌ Division: Cannot divide by zero.");
+            Console.ResetColor();
         }
 
         Console.ForegroundColor = ConsoleColor.Cyan;
@@ -55,8 +57,9 @@ public class CalculatorService
             spinner.Stop();
         }
 
-        Console.ForegroundColor = (number % 2 == 0) ? ConsoleColor.Green : ConsoleColor.Yellow;
-        Console.WriteLine($"\n{number} is {(number % 2 == 0 ? "Even" : "Odd")}.");
+        bool isEven = number % 2 == 0;
+        Console.ForegroundColor = isEven ? ConsoleColor.Green : ConsoleColor.Yellow;
+        Console.WriteLine($"\n{number} is {(isEven ? "Even" : "Odd")}.");
         Console.ResetColor();
     }
 
@@ -75,7 +78,7 @@ public class CalculatorService
         }
 
         StringBuilder table = new StringBuilder();
-        table.AppendLine($"\nMultiplication Table for {number}:");
+        table.AppendLine($"\n📌 Multiplication Table for {number}:");
 
         for (int i = 1; i <= 10; i++)
         {
